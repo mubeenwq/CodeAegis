@@ -1,0 +1,41 @@
+<!-- Compact icon-only version for sidebar / favicon use -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#f0d060"/>
+      <stop offset="40%"  stop-color="#c9a040"/>
+      <stop offset="70%"  stop-color="#e8c855"/>
+      <stop offset="100%" stop-color="#a07828"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0d5050"/>
+      <stop offset="100%" stop-color="#083830"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feFlood flood-color="#06d4c4" flood-opacity="0.5" result="c"/>
+      <feComposite in="c" in2="b" operator="in" result="g"/>
+      <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- C -->
+  <g filter="url(#glow)">
+    <path d="M32 6 C16 6,6 18,6 38 C6 58,16 70,32 70 L32 60 C22 60,16 51,16 38 C16 25,22 16,32 16 Z" fill="url(#g1)"/>
+    <rect x="16" y="6"  width="22" height="10" rx="1" fill="url(#g1)"/>
+    <rect x="16" y="60" width="22" height="10" rx="1" fill="url(#g1)"/>
+  </g>
+  <!-- A -->
+  <g filter="url(#glow)">
+    <path d="M43 70 L57 6 L63 6 L80 70 Z" fill="url(#g1)" opacity="0"/>
+    <path d="M44 70 L57 10 L70 70 Z" fill="url(#g1)"/>
+    <rect x="49" y="44" width="22" height="8" rx="1" fill="url(#g1)"/>
+  </g>
+  <!-- Shield -->
+  <g transform="translate(52,34)">
+    <path d="M0-13 C0-13,10-10,10-2 C10 5,5 12,0 15 C-5 12,-10 5,-10-2 C-10-10,0-13,0-13Z" fill="url(#g1)"/>
+    <path d="M0-11 C0-11,8-8,8-2 C8 4,4 10,0 13 C-4 10,-8 4,-8-2 C-8-8,0-11,0-11Z" fill="url(#g2)"/>
+    <circle cx="0" cy="-2" r="3" fill="url(#g1)"/>
+    <rect x="-1.5" y="1" width="3" height="6" rx="0.5" fill="url(#g1)"/>
+    <circle cx="0" cy="-2" r="1.5" fill="#083830"/>
+  </g>
+</svg>

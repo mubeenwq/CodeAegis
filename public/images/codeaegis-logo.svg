@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 240" fill="none">
+  <defs>
+    <!-- Gold metallic gradient -->
+    <linearGradient id="goldMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#f0d060"/>
+      <stop offset="30%"  stop-color="#c9a040"/>
+      <stop offset="55%"  stop-color="#e8c855"/>
+      <stop offset="75%"  stop-color="#a07828"/>
+      <stop offset="100%" stop-color="#d4aa45"/>
+    </linearGradient>
+    <!-- Gold edge highlight -->
+    <linearGradient id="goldEdge" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#fff5a0" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#b08020" stop-opacity="0.0"/>
+    </linearGradient>
+    <!-- Shield teal gradient -->
+    <linearGradient id="shieldBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0d4040"/>
+      <stop offset="50%"  stop-color="#0a6060"/>
+      <stop offset="100%" stop-color="#083830"/>
+    </linearGradient>
+    <!-- Shield gold border -->
+    <linearGradient id="shieldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#f0d060"/>
+      <stop offset="100%" stop-color="#a07828"/>
+    </linearGradient>
+    <!-- Cyan glow filter -->
+    <filter id="cyanGlow" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#06d4c4" flood-opacity="0.45" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Gold glow for tagline -->
+    <filter id="goldGlow" x="-10%" y="-40%" width="120%" height="180%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-color="#c9a040" flood-opacity="0.5" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- === C letter === -->
+  <g filter="url(#cyanGlow)">
+    <!-- C body -->
+    <path d="
+      M 148 18
+      C 100 18, 50 55, 50 115
+      C 50 175, 98 210, 148 210
+      L 148 183
+      C 110 183, 80 155, 80 115
+      C 80 75, 110 45, 148 45
+      L 148 18 Z
+    " fill="url(#goldMain)" stroke="none"/>
+    <!-- C top arm -->
+    <path d="M 110 18 L 200 18 L 200 46 L 148 46 L 148 18 Z" fill="url(#goldMain)"/>
+    <!-- C bottom arm -->
+    <path d="M 110 182 L 200 182 L 200 210 L 148 210 L 148 182 Z" fill="url(#goldMain)"/>
+    <!-- C highlight streak -->
+    <path d="M 60 55 Q 85 35 125 25 L 125 38 Q 92 50 72 68 Z" fill="url(#goldEdge)" opacity="0.7"/>
+  </g>
+
+  <!-- === A letter === -->
+  <g filter="url(#cyanGlow)">
+    <!-- A left leg -->
+    <path d="M 230 210 L 300 18 L 325 18 L 265 210 Z" fill="url(#goldMain)"/>
+    <!-- A right leg -->
+    <path d="M 390 210 L 325 18 L 300 18 L 360 210 Z" fill="url(#goldMain)"/>
+    <!-- A crossbar -->
+    <path d="M 255 138 L 365 138 L 358 162 L 262 162 Z" fill="url(#goldMain)"/>
+    <!-- A highlight streak on left leg -->
+    <path d="M 303 22 L 318 22 L 282 112 L 268 112 Z" fill="url(#goldEdge)" opacity="0.6"/>
+  </g>
+
+  <!-- === Shield icon (between C and A) === -->
+  <g transform="translate(286, 108)">
+    <!-- Shield outer border -->
+    <path d="M 0 -48 C 0 -48, 36 -38, 36 -4 C 36 20, 20 42, 0 52 C -20 42, -36 20, -36 -4 C -36 -38, 0 -48, 0 -48 Z"
+          fill="url(#shieldBorder)" />
+    <!-- Shield inner fill -->
+    <path d="M 0 -42 C 0 -42, 30 -33, 30 -4 C 30 17, 16 37, 0 46 C -16 37, -30 17, -30 -4 C -30 -33, 0 -42, 0 -42 Z"
+          fill="url(#shieldBg)" />
+    <!-- Keyhole circle -->
+    <circle cx="0" cy="-6" r="10" fill="url(#goldMain)"/>
+    <!-- Keyhole slot -->
+    <path d="M -5 0 L -5 18 L 5 18 L 5 0 Z" fill="url(#goldMain)"/>
+    <!-- Inner keyhole circle cutout -->
+    <circle cx="0" cy="-6" r="5" fill="#083830"/>
+  </g>
+
+  <!-- === Divider dot === -->
+  <rect x="254" y="218" width="4" height="4" rx="2" fill="url(#goldMain)" opacity="0.8"/>
+
+  <!-- === Tagline === -->
+  <text
+    x="260"
+    y="236"
+    font-family="'Trebuchet MS', 'Segoe UI', Arial, sans-serif"
+    font-size="13"
+    font-weight="600"
+    letter-spacing="6"
+    text-anchor="middle"
+    fill="url(#goldMain)"
+    filter="url(#goldGlow)"
+  >FROM INTENT TO PREVENT</text>
+</svg>
